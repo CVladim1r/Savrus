@@ -1,0 +1,795 @@
+@font-face {
+    font-family: "ArealRegular"; 
+    src: url("../font/Areal Regular/ofont.ru_Arial.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+body {
+    color: white;
+    background-color: #090b21;
+    margin: 0;
+    padding: 0;
+    font-family: "ArealRegular"; 
+    color: #f9f9f9;
+    width: 80%;
+    margin: auto;
+    max-width: 1280px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+main{
+    padding: 20px;
+    padding-top: 0px;
+}
+.SIEM
+{
+    margin-bottom: 50px;
+    
+}
+.siemP{
+    font-family: "ArealRegular"; 
+    font-size:40px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+    margin-top: 68px;
+    margin-bottom: 68px;
+
+}
+.square{
+    display: flex;
+    gap:18px;
+    padding-bottom: 24px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.square-mobile{
+    display: flex;
+    gap:18px;
+    padding-bottom: 24px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.card-main {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    vertical-align: middle;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.a {
+    width: 150px;
+    height: 120px;
+    border-radius: 10%;
+    border: 2px solid rgb(228, 228, 228);
+    padding: 8px;
+}
+
+.a:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.bye{
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+/* Backgroind для карт      
+    background-image: url('img/common/card/computer.png');
+    background-size: cover;
+    background-position: center;*/
+
+.computer-png-img{
+    background-image: url('img/common/card/computer.png');
+    background-size: 70%;
+    background-clip: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.data-storage-img{
+    background-image: url('img/common/card/data.storage.png');
+    background-size: 55%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.correlation-png{
+    background-image: url('img/common/card/correlation.png');
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.loupe-png{
+    background-image: url('img/common/card/loupe.png');
+    background-size: 55%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.notification-png{
+    background-image: url('img/common/card/notification.png');
+    background-size: 60%;
+    background-clip: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.screen-png{
+    background-image: url('img/common/card/screen.png');
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    /* Вертикальный отступ 20px */
+}
+
+.card {
+    width: 100px;
+    height: 80px;
+    margin: 0 10px;
+    /* Горизонтальный отступ между карточками */
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.custom-button{
+    background-color: #090b21;
+    border: none;
+    font: inherit;
+    color: inherit;
+}
+
+
+
+.custom-button:hover .a {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgb(9, 11, 33, 0.7);
+    color: #fff;
+    padding: 20px;
+    width: 250px;
+    height: 214px;
+    border: 2px solid rgb(228, 228, 228);
+    border-radius: 32px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+    font-size: 16px;
+    text-align:justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0%;
+    left: 0%;
+    transform-origin: center center;
+    line-height: 1.65;
+    opacity: 0;
+}
+.overlay.active {
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+    flex-direction: row;
+    display:flex;
+    gap:15px;
+    margin-bottom: 120px;
+}
+.POS{
+    margin-top: 55px;
+    margin-bottom: 54px;
+    font-size:35px;
+    margin-left: 68px;
+}
+.arr{
+    color: #de2b1a;
+    font-size: 70px;
+}
+
+.pos{
+    font-size: 16px;
+    border-radius: 5%;
+    font-weight: 100;
+    height: 165px;
+    padding-left: 14px;
+    padding-right: 14px;
+    background-color: #3f6386;
+}
+.pos2{
+    font-size:24px;
+    height: 200px;
+    border-radius: 5%;
+    padding-left: 14px;
+
+    background-color: #de2b1a;
+}
+.ada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 14px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.2);
+}
+
+header {
+    padding-top: 24px;
+    height:40px;
+    width: 100%;
+}
+
+.header__pageLink {
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 2px;
+    margin: 0 7px;
+    font-size: 14px;
+}
+
+.header__pageLink-contact {
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 2px;
+    margin: 0 20px;
+    font-size: 14px;
+    padding-left: 50px;
+}
+
+#header-box {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#soso {
+    height: 20px;
+    width: 20px;
+    background-color: #de2b1a;
+}
+
+.men {
+    padding-left: 390px;
+}
+
+.lol {
+    margin-right: 210px;
+}
+
+.inv-button {
+    border: medium none;
+    background-image: none;
+    background: transparent;
+    float: left;
+    background-color: transparent;
+}
+.red-line {
+    border: none; /* Убираем границу */
+    background-color: #de2b1a; /* Цвет линии */
+    color: #de2b1a; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */
+    margin: 0;
+    padding: 0;
+}
+
+#img{
+    margin-top: 25px;
+    
+}
+
+
+.but-img-nch{
+    font-size:20px;
+    border-radius: 2%;
+    width: 300px;
+    height: 60px;
+    background-color: #3f6386;
+}
+
+.but-img-ch{
+    font-size:20px;
+    width: 300px;
+    height: 60px;
+    border-radius: 2%;
+    background-color: #de2b1a;
+    text-align: center;
+}
+
+.but-img-ch p{
+    text-align: center;
+}
+
+.but-img-nch p{
+    text-align: center;
+}
+
+
+li span {
+    color: #FFFFFF; /* Цвет текста */
+}
+li {
+    color: red; /* Цвет текста */
+    list-style-type: square;
+    font-size: 40px;
+}
+
+span{
+    font-weight: 100;
+}
+
+
+
+
+#architecture-description {
+    margin-bottom: 76px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-left: 86px;
+    margin-right: 86px;
+}
+
+#architecture-description-text{
+    margin-right: 40px;
+    line-height: 25px;
+    margin-top: 4px;
+    font-size: 18px;
+    white-space: pre-line;
+}
+
+
+
+footer {
+  padding: 20px;
+}
+
+.top {
+  text-align: center;
+}
+
+.top p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.bottom {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.bottom a {
+  margin: 0px 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.bottom a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border-top: 1px solid red;
+  margin-bottom: 10px;
+}
+
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.but-img-chc{
+    margin: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 296px;
+    height: 200px;
+    border-radius: 2%;
+    background-color: blue;
+    text-align: center;
+}
+.but-img-nchc{
+    margin: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 300px;
+    height: 200px;
+    border-radius: 2%;
+    background-image: url("img/description/active channel diagram.jpg");
+    text-align: center;
+}
+
+.interface-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#interface-image{
+    width: 70%;
+    height: 70%;
+}
+
+.card-n {
+    width: 270px;
+    height: 160px;
+    background-color: #3f6386;
+    padding: 20px;
+    color: white;
+    font-size: 22px;
+    border-radius: 14px;
+    margin-right: 40px;
+    margin-bottom: 26px;
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Styling for the top and bottom card sections */
+.top-cards,
+.bottom-cards {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* Center the content inside each card */
+.top-cards .card,
+.bottom-cards .card {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.container-but{
+    padding-top: 60px;
+    flex-direction: row;
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container-img {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    /* Adjust styles for tablets in portrait mode here */
+    body {
+        width: 100%;
+    }
+    .header{
+        padding-left: 0px;
+        font-size: 10px;
+    }
+    .header__pageLink {
+        font-size: 10px;
+    }
+    .red-line {
+        width: 100%;
+    }
+    .container{
+        flex-wrap: wrap;
+    }
+    .square-mobile{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .square{
+        display:none;
+    }
+
+    .pos2 {
+        font-size: 25px;
+        height: 161px;
+        border-radius: 5%;
+        padding: 12px;
+        background-color: #de2b1a;
+        width: 330px;
+    }
+    .pos {
+        font-size: 14px;
+        border-radius: 5%;
+        width: 330px;
+        height: 71px;
+        padding: 12px;
+        background-color: #3f6386;
+    }
+    .siemP {
+        font-size: 23px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .header__pageLink-contact {
+        display: none;
+    }
+    .men{
+        display: none;
+    }
+    .lol {
+        margin-right: 0px;
+    }
+}
+
+/* Styles for screens between 769px and 1024px wide (e.g., tablets in landscape mode) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Adjust styles for tablets in landscape mode here */
+    body {
+        width: 100%;
+    }
+    .header{
+        padding-left: 0px;
+        font-size: 12px;
+    }
+    .header__pageLink {
+        font-size: 12px;
+    }
+    .red-line {
+        width: 100%;
+    }
+}
+
+/* Styles for screens between 1025px and 1280px wide (e.g., small desktops and laptops) */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .square-mobile{
+        display:none;
+    }
+    body {
+        width: 100%;
+    }
+
+    .header{
+        padding-left: 0px;
+        font-size: 14px;
+    }
+
+    .a {
+        width: 150px;
+        height: 120px;
+        border-radius: 10%;
+        border: 1px solid rgb(228, 228, 228);
+        padding: 8px;
+    }
+
+    .overlay{
+        border: 1px solid rgb(228, 228, 228);
+    }
+
+
+    .men{
+        padding-left: 423px;
+    }
+    .pos2 {
+        font-size: 26px;
+        padding-right: 14px;
+        height: 200px;
+        width: 60%;
+    }
+    .pos2 p{
+        margin-top: 14px;
+        padding-left: 18px;
+    }
+    .pos{
+        font-size: 18px;
+        padding-top: 8px;
+        border-radius: 5%;
+        background-color: #3f6386;
+    }
+    .header__pageLink-contact{
+        padding-left: 15px;
+    }
+    .red-line {
+        width: 100%;
+    }
+
+}
+
+/* Styles for screens 1281px wide and above (e.g., larger desktops) */
+@media screen and (min-width: 1281px) {
+    /* Adjust styles for larger desktop screens here */
+    .square-mobile{
+        display:none;
+    }
+    .red-line {
+        width: 100%;
+    }
+    .pos{
+        font-size: 18px;
+        padding-top: 8px;
+
+    }
+    .pos2{
+        padding-left: 18px;
+        padding-right: 14px;
+
+    }
+
+        
+    .square{
+        flex-direction: row;
+        padding-bottom: 104px;
+    }
+    .about-us{
+        margin-bottom: 124px;
+    }
+}
