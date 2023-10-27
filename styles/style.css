@@ -11,7 +11,7 @@ body {
     padding: 0;
     font-family: "ArealRegular"; 
     color: #f9f9f9;
-    width: 80%;
+    width: 90%;
     margin: auto;
     max-width: 1280px;
 }
@@ -28,6 +28,16 @@ main{
     margin-bottom: 50px;
     
 }
+
+.sav-contact{
+    width: 865px;
+    display: flex;
+    justify-content: flex-end;
+}
+#ph-2{
+    display: flex;
+}
+
 .siemP{
     font-family: "ArealRegular"; 
     font-size:40px;
@@ -43,9 +53,9 @@ main{
     display: flex;
     gap:18px;
     padding-bottom: 24px;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
@@ -296,13 +306,6 @@ header {
     background-color: #de2b1a;
 }
 
-.men {
-    padding-left: 390px;
-}
-
-.lol {
-    margin-right: 210px;
-}
 
 .inv-button {
     border: medium none;
@@ -516,15 +519,15 @@ hr {
 
 
 
-
-
-
-
-
 .container-img {
-    position: relative;
-  }
-  
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+}
   /* Hide the images by default */
   .mySlides {
     display: none;
@@ -616,23 +619,6 @@ hr {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
     /* Adjust styles for tablets in portrait mode here */
     body {
@@ -697,9 +683,46 @@ hr {
     body {
         width: 100%;
     }
+    .sav-contact {
+        width: 660px;
+    }
     .header{
         padding-left: 0px;
         font-size: 12px;
+    }
+    .but-img-nch {
+        /* font-size: 20px; */
+        border-radius: 2%;
+        width: 230px;
+        /* height: 60px; */
+        font-size: 18px;
+        background-color: #3f6386;
+    }
+
+    .but-img-ch {
+        font-size: 18px;
+        width: 230px;
+        height: 60px;
+        border-radius: 2%;
+        background-color: #de2b1a;
+        text-align: center;
+    }
+
+    #architecture-description-text {
+        margin-right: 40px;
+        line-height: 25px;
+        margin-top: 4px;
+        font-size: 16px;
+        white-space: pre-line;
+    }
+    .container-but {
+        padding-top: 60px;
+        flex-direction: row;
+        display: flex;
+        gap: 13px;
+        align-content: center;
+        /* justify-content: space-around; */
+        flex-wrap: nowrap;
     }
     .header__pageLink {
         font-size: 12px;
@@ -713,6 +736,9 @@ hr {
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
     .square-mobile{
         display:none;
+    }
+    .square{
+        flex-direction: row;
     }
     body {
         width: 100%;
@@ -787,6 +813,7 @@ hr {
         
     .square{
         flex-direction: row;
+        
         padding-bottom: 104px;
     }
     .about-us{
