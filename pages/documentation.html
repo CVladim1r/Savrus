@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <html lang="ru" xmlns:padding-left="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>САВРУС | Документация</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="САВРУС, SAVRUS, саврус, ArcSight, Среда анализа и визуализации рисков">
+        <link rel="shortcut icon" href="../img/common/favicon.png" type="image/png">
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    </head>
+
+    <body { display: none; }>
+        <header>
+            <section id="header-box">
+                <div>
+                    <div id="ph-2">
+                        <a href="../index.html" class="header__pageLink">Главная</a>
+                        <a href="../pages/partners.html" class="header__pageLink">Партнеры</a>
+                        <a href="../pages/documentation.html" class="header__pageLink">Документация</a>
+                        <a href="../pages/study.html" class="header__pageLink">Обучение</a>
+                        <a href="../pages/english.html" class="header__pageLink">English</a>
+                        <div class="sav-contact">
+                            <img src="../img/common/Property 1=Default.png" alt="" width="135px" height="100%">
+                            <a href="#" class="header__pageLink-contact" padding-left: 63px;>Контакты</a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+            </section>
+        </header>
+        <main>
+            <div class="red-line"></div>
+            <div class="text-study">
+                <h1 style="margin-bottom: 64px;">Документация</h1>
+                <div style="
+                width: 80%;">
+                    <p>Стоимость лицензии САВРУС зависит от потока событий и рассчитывается индивидуально.
+                    За расчётом стоимости можно обратиться по эл. почте info@savrus.ru и телефону +7 499 704 5074</p>
+                    <p>Минимальные системные требования для САВРУС <a href="https://cloud.ast-security.ru/index.php/apps/epubreader/?file=%2Fremote.php%2Fwebdav%2F%25D0%25A1%25D0%25B0%25D0%25B9%25D1%2582%2520savrus.ru%2Fdocs%2Fminimum%2520system%2520requirements.pdf&type=application%2Fpdf">Скачать</a></p>
+                    <p>Требования к аппаратным ресурсам для системы САВРУС <a href="https://cloud.ast-security.ru/index.php/apps/epubreader/?file=%2Fremote.php%2Fwebdav%2F%25D0%25A1%25D0%25B0%25D0%25B9%25D1%2582%2520savrus.ru%2Fdocs%2Frequirements.pdf&type=application%2Fpdf">Скачать</a></p>
+                    <p>Руководство администратора и инструкция по установке <a href="https://cloud.ast-security.ru/index.php/apps/epubreader/?file=%2Fremote.php%2Fwebdav%2F%25D0%25A1%25D0%25B0%25D0%25B9%25D1%2582%2520savrus.ru%2Fdocs%2Fadministrator.pdf&type=application%2Fpdf">Скачать</a></p>
+                    <p>Руководство пользователя <a href="https://cloud.ast-security.ru/index.php/apps/epubreader/?file=%2Fremote.php%2Fwebdav%2F%25D0%25A1%25D0%25B0%25D0%25B9%25D1%2582%2520savrus.ru%2Fdocs%2Fguide.pdf&type=application%2Fpdf">Скачать</a></p>
+                    <p>Функциональные характеристики <a href="https://cloud.ast-security.ru/index.php/apps/epubreader/?file=%2Fremote.php%2Fwebdav%2F%25D0%25A1%25D0%25B0%25D0%25B9%25D1%2582%2520savrus.ru%2Fdocs%2Fcharacteristics.pdf&type=application%2Fpdf">Скачать</a></p>
+                    <p>За дополнительной информацией обращайтесь по телефону: +7 499 704 5074</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="top">
+                <p>САВРУС 2023</p>
+                <div class="red-line"></div>
+            </div>
+            <div class="bottom">
+                <a href="../pages/partners.html">Партнеры</a>
+                <a href="../pages/documentation.html">Документация</a>
+                <a href="../pages/study.html">Обучение</a>
+                <a href="../pages/english.html">English</a>
+                <a class="fade" href="#">Контакты</a>
+            </div>
+        </footer>
+    </body>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("body").css("display", "none"); 
+
+        $("body").fadeIn(300); /** время появления в миллисекундах */
+        
+        $("a.fade").click(function(event){
+            event.preventDefault();
+            linkLocation = this.href;
+            $("body").fadeOut(300, redirectPage); /** время изчезания в миллисекундах */
+        });
+
+        function redirectPage() {
+            window.location = linkLocation;
+        }
+    });
+    </script>  
+</html>

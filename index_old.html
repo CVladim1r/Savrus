@@ -10,37 +10,19 @@
         <link rel="stylesheet" type="text/css" href="styles/style.css">
     </head>
 
-    <body>
+    <body { display: none; }>
         <header>
             <section id="header-box">
                 <div>
-                    <div class="header-pc">
-                        <div id="ph-2">
-                            <a href="index.html" class="header__pageLink">Главная</a>
-                            <a href="pages/partners.html" class="header__pageLink">Партнеры</a>
-                            <a href="pages/documentation.html" class="header__pageLink">Документация</a>
-                            <a href="pages/study.html" class="header__pageLink">Обучение</a>
-                            <a href="pages/english.html" class="header__pageLink">English</a>
-                            <div class="sav-contact">
-                                <img src="img/common/Property 1=Default.png" class="header-img-savrus" alt="" width="135px" height="100%">
-                                <a href="#" class="header__pageLink-contact" padding-left: 63px;>Контакты</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mobile-header">
-                        <div id="ph-2">
-                            <div class="block-with-links">
-                                <a href="index.html" class="header__pageLink">Главная</a>
-                                <a href="pages/partners.html" class="header__pageLink">Партнеры</a>
-                                <a href="pages/documentation.html" class="header__pageLink">Документация</a>
-                                <a href="pages/study.html" class="header__pageLink">Обучение</a>
-                                <a href="pages/english.html" class="header__pageLink">English</a>
-                                <a href="pages/english.html" class="header__pageLink">Контакты</a>
-                            </div>
-                            <div class="mobile-img-header">
-                                <img src="img/common/Property 1=Default.png" class="moblie-img-img" margin-top="16px" 
-                                margin-bottom="20px" alt="" width="135px" height="100%">
-                            </div>
+                    <div id="ph-2">
+                        <a href="index.html" class="header__pageLink fade">Главная</a>
+                        <a href="pages/partners.html" class="header__pageLink fade">Партнеры</a>
+                        <a href="pages/documentation.html" class="header__pageLink fade">Документация</a>
+                        <a href="pages/study.html" class="header__pageLink fade">Обучение</a>
+                        <a href="pages/english.html" class="header__pageLink fade">English</a>
+                        <div class="sav-contact">
+                            <img src="img/common/Property 1=Default.png" alt="" width="102px" height="17.62px">
+                            <a href="#" class="header__pageLink-contact" padding-left: 63px;>Контакты</a>
                         </div>
                     </div>
                 </div>
@@ -108,7 +90,7 @@
 
 
             <p class = "POS">Архитектура</p>
-            <img src="img/description/arch.png" id="img">
+            <img src="img/description/architectsav.png" id="img">
             <section class="ada">
                 <div class="container-but">
                     <div class = "but-img-nch" id = "sources" onclick="imgButton('sources')"><p>ИСТОЧНИКИ ДАННЫХ</p></div>
@@ -248,15 +230,32 @@
                 <div class="red-line"></div>
             </div>
             <div class="bottom">
-                <a href="pages/partners.html">Партнеры</a>
-                <a href="pages/documentation.html">Документация</a>
-                <a href="pages/study.html">Обучение</a>
-                <a href="pages/english.html">English</a>
-                <a class="" href="#">Контакты</a>
+                <a class="fade" href="#">Партнеры</a>
+                <a class="fade" href="#">Документация</a>
+                <a class="fade" href="#">Обучение</a>
+                <a class="fade" href="#">English</a>
+                <a class="fade" href="#">Контакты</a>
             </div>
         </footer>
 
         <script src = "scripts/script.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
     </body>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("body").css("display", "none"); 
+
+        $("body").fadeIn(300); /** время появления в миллисекундах */
+        
+        $("a.fade").click(function(event){
+            event.preventDefault();
+            linkLocation = this.href;
+            $("body").fadeOut(300, redirectPage); /** время изчезания в миллисекундах */
+        });
+
+        function redirectPage() {
+            window.location = linkLocation;
+        }
+    });
+    </script>
 </html>
